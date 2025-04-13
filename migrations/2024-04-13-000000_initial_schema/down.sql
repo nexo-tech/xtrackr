@@ -1,0 +1,4 @@
+DROP FUNCTION IF EXISTS anonymize_ip;
+DROP TABLE IF EXISTS events;
+DROP TABLE IF EXISTS sessions;
+DROP TABLE IF EXISTS visitors; 

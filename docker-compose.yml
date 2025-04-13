@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: xtrackr
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  app:
+    build: .
+    environment:
+      - DATABASE_URL=postgres://postgres:postgres@postgres:5432/xtrackr
+      - DATABASE_MAX_CONNECTIONS=10
+      - SERVER_ADDRESS=0.0.0.0:3000
+      - PRIVACY_DATA_RETENTION_DAYS=90
+      - PRIVACY_ANONYMIZE_IP=true
+      - PRIVACY_COOKIE_LIFETIME_DAYS=365
+    ports:
+      - "3000:3000"
+    depends_on:
+      - postgres
+
+volumes:
+  postgres_data: 

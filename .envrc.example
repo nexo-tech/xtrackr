@@ -1,0 +1,7 @@
+export DATABASE__URL=postgres://postgres:postgres@localhost:5432/xtrackr
+export DATABASE__MAX_CONNECTIONS=10
+export SERVER__ADDRESS=127.0.0.1:3000
+export PRIVACY__DATA_RETENTION_DAYS=90
+export PRIVACY__ANONYMIZE_IP=true
+export PRIVACY__COOKIE_LIFETIME_DAYS=365
+export RUST_LOG=info 

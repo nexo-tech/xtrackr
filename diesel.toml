@@ -1,0 +1,7 @@
+[print_schema]
+file = "src/schema.rs"
+filter = { only_tables = ["visitors", "sessions", "events"]}
+import_types = ["diesel::sql_types::*", "crate::models::*"]
+
+[migrations_directory]
+dir = "migrations" 
