@@ -1,3 +1,6 @@
+> 🚧 Work in Progress
+> XTrackr is currently under active development. While key features are in place, expect breaking changes, incomplete documentation, and the occasional existential bug. Contributions and feedback are welcome—just don’t expect a polished experience yet.
+
 # XTrackr
 
 A privacy-first, GDPR-compliant tracking solution built with Rust and PostgreSQL.
